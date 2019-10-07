@@ -31,9 +31,24 @@ h1 , h2 , h3 , h4 , h5 {
 }
 
 .body-width {
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+@media (max-width: 800px) {
+	.body-width {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 500px) {
+	.body-width {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 body {
@@ -125,7 +140,7 @@ a:hover {
   navigation
 --------------------------------------*/
 
-.nav-top {
+.nav-top.flex-wrapper {
 	position: fixed;
   z-index: 999;
   top: 0px;
@@ -140,7 +155,7 @@ a:hover {
 	margin: 0 auto;
 }
 
-nav {
+nav.flex-wrapper {
 	flex-flow: row nowrap; /* normal behavior */
 }
 
@@ -165,7 +180,7 @@ nav > a:hover {
   header
 --------------------------------------*/
 
-header {
+header.flex-wrapper {
 	padding: 115px 0 50px;
 }
 
@@ -202,15 +217,14 @@ a.button span {
 
 /* media-based styles */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
 	.header-image {
 		display: none;
 	}
-}
 
-@media (max-width: 500px) {
-	.header-image {
-		display: none;
+	header.flex-wrapper {
+		justify-content: center;
 	}
 }
 
@@ -218,8 +232,14 @@ a.button span {
   main
 --------------------------------------*/
 
-main {
+main.flex-wrapper {
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
 
+main section.flex-content {
+	padding-left: 1%;
+	padding-right: 1%;
 }
 
 #features ,
@@ -227,8 +247,8 @@ main {
 	flex-basis: 50%;
 }
 
-.middle-image {
-	flex-basis: 100%;
+img.middle-image {
+	max-width: 100%;
 }
 
 #services ,
@@ -243,8 +263,9 @@ main {
 
 @media (max-width: 500px) {
 
-	main {
+	main.flex-wrapper {
 		flex-flow: column nowrap;
+		align-content: center;
 	}
 
 	#features ,
@@ -253,6 +274,8 @@ main {
 	#product ,
 	#vision {
 		flex-basis: 100%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 }
