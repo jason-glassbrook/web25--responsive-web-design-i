@@ -20,9 +20,9 @@ h1 , h2 , h3 , h4 , h5 {
 
 /* debugging */
 
-* {
+/* * {
 	outline: 1px solid Magenta;
-}
+} */
 
 /* body , partitions */
 
@@ -31,6 +31,7 @@ h1 , h2 , h3 , h4 , h5 {
 }
 
 .body-width {
+	margin: 0 auto;
 	width: 100%;
 	max-width: 960px;
 	padding-left: 30px;
@@ -148,20 +149,43 @@ a:hover {
 
   background-color: White;
   
-	flex-flow: row nowrap; /* normal behavior */
+	flex-flow: column nowrap; /* normal behavior */
+	justify-content: center;
+	align-items: center; 
 }
 
-.nav-top > .body-width {
-	margin: 0 auto;
+.nav-top.flex-wrapper > .nav-area.flex-wrapper {
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
 }
 
+a.logo.flex-content {
+	height: 90px;
+	flex-grow: 0;
+}
+a.logo.flex-wrapper {
+	justify-content: center;
+	align-content: center;
+}
+
+nav.flex-content {
+	min-height: 60px;
+	width: 100%;
+}
 nav.flex-wrapper {
 	flex-flow: row nowrap; /* normal behavior */
+}
+
+nav > a.flex-content {
+	display: inline-block;
+	width: 100%;
 }
 
 nav > a {
   color: Gray;
   font-weight: bold;
+	vertical-align: middle;
 }
 
 nav > a:hover {
@@ -171,9 +195,40 @@ nav > a:hover {
 /* media-based styles */
 
 @media (max-width: 800px) {
+
+	.nav-top.flex-wrapper > .nav-area.flex-wrapper {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+
+	nav > a.flex-content {
+		text-align: center;
+	}
+
+	header.flex-wrapper {
+		margin-top: 150px;
+	}
+
 }
 
 @media (max-width: 500px) {
+
+	nav.flex-wrapper {
+		flex-flow: column nowrap;
+	}
+
+	nav > a.flex-content {
+		height: 60px;
+		border: 1px solid Gray;
+		border-left: none;
+		border-right: none;
+	}
+
+	header.flex-wrapper {
+		margin-top: 450px;
+	}
+
 }
 
 /*--------------------------------------
@@ -181,7 +236,18 @@ nav > a:hover {
 --------------------------------------*/
 
 header.flex-wrapper {
-	padding: 115px 0 50px;
+	margin-top: 90px;
+	padding: 25px 0 50px;
+}
+@media (max-width: 800px) {
+	header.flex-wrapper {
+		margin-top: 150px;
+	}
+}
+@media (max-width: 500px) {
+	header.flex-wrapper {
+		margin-top: 450px;
+	}
 }
 
 .header-title {
@@ -254,7 +320,7 @@ img.middle-image {
 #services ,
 #product ,
 #vision {
-	flex-basis: 33%;
+	flex-basis: 30%;
 }
 
 /* media-based styles */
