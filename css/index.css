@@ -148,10 +148,10 @@ a:hover {
   left: 0px;
 
   background-color: White;
-  
+
 	flex-flow: column nowrap; /* normal behavior */
 	justify-content: center;
-	align-items: center; 
+	align-items: center;
 }
 
 .nav-top.flex-wrapper > .nav-area.flex-wrapper {
@@ -214,15 +214,23 @@ nav > a:hover {
 
 @media (max-width: 500px) {
 
+	.nav-top.flex-wrapper {
+		position: relative;
+	}
+
 	nav.flex-wrapper {
 		flex-flow: column nowrap;
 	}
 
 	nav > a.flex-content {
 		height: 60px;
-		border: 1px solid Gray;
+		border-top: 1px solid Gray;
 		border-left: none;
 		border-right: none;
+	}
+
+	nav > a.flex-content:last-of-type {
+		border-bottom: 1px solid Gray;
 	}
 
 	header.flex-wrapper {
@@ -246,7 +254,7 @@ header.flex-wrapper {
 }
 @media (max-width: 500px) {
 	header.flex-wrapper {
-		margin-top: 450px;
+		margin-top: 0px;
 	}
 }
 
