@@ -1,3 +1,178 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box !important;
+}
 
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
 
+h1 , h2 , h3 , h4 , h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+body {
+	width: 876px;
+	margin: 0 75px;
+
+	font-size: 16px;
+}
+
+/* body * {
+	border: 1px solid Magenta;
+} */
+
+p , address {
+	line-height: 1.15em;
+}
+
+h1 {
+	font-size: 80px;
+	letter-spacing: 3px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+nav , header, section , footer {
+	width: 876px;
+}
+
+/* navigation area */
+
+nav {
+	height: 90px;
+	padding: 27px 0;
+
+	position: fixed;
+	z-index: 999;
+
+	background-color: White;
+	font-size: 14px;
+}
+
+nav > * {
+	display: inline-block;
+	margin: 0 31.5px;
+	vertical-align: middle;
+}
+nav > *:first-child {
+	margin-left: 0;
+}
+nav > *:last-child {
+	margin-right: 0;
+}
+
+nav > a {
+	text-decoration: none;
+	color: Gray;
+}
+nav > a:hover {
+	text-decoration: underline;
+	color: Black;
+}
+
+nav > img.logo {
+	margin-left: 62px;
+}
+
+/* header area */
+
+header {
+	padding: 115px 0 50px;
+}
+
+header > * {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.header-title {
+	height: 380px;
+	width: 430px;
+	margin: 20px;
+}
+
+a.button {
+	display: inline-block;
+	font-size: 18px;
+	color: inherit;
+	background-color: White;
+	text-decoration: none;
+}
+a.button:hover {
+	background-color: Gray;
+	text-decoration: underline;
+}
+a.button > div {
+	height: 35px;
+	width: 175px;
+	padding: 5px;
+	border: 1px solid Black;
+}
+a.button span {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.header-image {
+	height: 380px;
+	width: 380px;
+	margin-left: 20px;
+}
+
+/* sections */
+
+section {
+	padding: 40px 0;
+}
+section > .col:first-child {
+	margin-left: 0;
+}
+section > .col:last-child {
+	margin-right: 0;
+}
+
+section.part-1 {
+	border-top: 1px solid Black;
+}
+
+section.part-2 {
+	border-bottom: 1px solid Black;
+}
+
+.col {
+	display: inline-block;
+	margin: 0 10px;
+}
+.cols-1 {
+	width: 100%;
+}
+.cols-2 {
+	width: 425px;
+}
+.cols-3 {
+	width: 275px;
+}
+
+address > a {
+	text-decoration: none;
+	color: inherit;
+}
+address > a:hover {
+	text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+	text-align: center;
+	font-size: 14px;
+}
