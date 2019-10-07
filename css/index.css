@@ -307,6 +307,10 @@ a.button span {
 --------------------------------------*/
 
 main.flex-wrapper {
+	border: 1px solid Black;
+	border-left: none;
+	border-right: none;
+
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
